@@ -4,7 +4,7 @@ package br.senai.sp.jandira.clientesapp.model
 //? = Para dizer que o numero pode ser null
 
 data class Cliente(
-    val id: Long? = 0,
+    val id: Long? = null,
     val nome: String = "",
     val email: String = ""
 )

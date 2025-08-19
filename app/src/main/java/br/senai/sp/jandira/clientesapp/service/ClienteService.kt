@@ -5,6 +5,7 @@ import retrofit2.Call
 import retrofit2.http.Body
 import retrofit2.http.DELETE
 import retrofit2.http.GET
+import retrofit2.http.HTTP
 import retrofit2.http.POST
 import retrofit2.http.PUT
 import retrofit2.http.Path
@@ -22,8 +23,7 @@ interface ClienteService {
 
         //unit = sem retorno/retorno vazio
         //path = caminho
-
-    @DELETE("clientes")
+    @HTTP(method = "DELETE", path = "clientes", hasBody = true)
     fun excluir(@Body cliente: Cliente): Call<Unit>
 
     @GET("clientes/{id}")
